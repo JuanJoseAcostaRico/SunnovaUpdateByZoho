@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app/
 
 # Instalamos las dependencias de la aplicación
-RUN python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt
+RUN python pip install -r requirements.txt
 
 # Exponemos el puerto 8080 para que sea accesible desde fuera del contenedor
 EXPOSE 8080
