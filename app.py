@@ -25,7 +25,7 @@ def upload():
         zoho_df['Record Id'] = zoho_df['Record Id'].str.replace('zcrm_', '')
 
         # Realizar el emparejamiento de datos y generar el informe combinado
-        merged_df = pd.merge(zoho_df, sunnova_df, left_on='Sunnova Project ID', right_on='Sunnova System ID', how='left')
+        merged_df = pd.merge(zoho_df, sunnova_df, left_on='Sunnova Project ID', right_on='Sunnova Project ID', how='left')
 
         # Crear un objeto de BytesIO para escribir el archivo CSV
         output = io.BytesIO()

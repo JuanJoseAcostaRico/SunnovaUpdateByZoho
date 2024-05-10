@@ -1,3 +1,0 @@
-name: my-flask-app
-buildCommand: python -m pip install -r requirements.txt
-startCommand: python app.py
